@@ -102,24 +102,7 @@ setLoading(false);
 navigate(`/view-trip/${docId}`)
 }
 
-  const GetUserProfile = (tokenInfo) => {
-    axios
-      .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${tokenInfo?.access_token}`, {
-        headers: {
-          Authorization: `Bearer ${tokenInfo?.access_token}`,
-          Accept: 'application/json',
-        },
-      })
-      .then((resp) => {
-        console.log('User Profile Data:', resp.data); // Log the user profile data
-        localStorage.setItem('user',JSON.stringify(resp.data));
-        setOpenDialog(false);
-        OnGenerateTrip();
-      })
-      .catch((error) => {
-        console.error('Error fetching user profile:', error);
-      });
-  };
+
 
   return (
     <div className="sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 mt-10">

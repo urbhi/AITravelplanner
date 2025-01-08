@@ -33,7 +33,7 @@ function Viewtrip() {
     {/* recommonded Hotels */}
 <Hotels trip={trip}/>
     {/* Daily plan */}
-<Placestovisit/>
+<Placestovisit trip={trip} />
     {/* footer */}
     </div>
   )
